@@ -77,8 +77,11 @@ print(f"total pay for {hours_worked}hours is {total_pay}")
 # Calculate the number of seconds a person can live
 
 
-your_age=(input('enter your age'))
-sec_lived=31,536,000*float(your_age)
-min_lived=525,600*float(your_age)
 
-print(f"you have lived for{sec_lived:,}seconds or {min_lived:,} minutes")
+def seconds_lived(age):
+  seconds_per_year = 31536000
+  total_seconds = float(age) * seconds_per_year
+  return total_seconds
+age = int(input("Enter your age: "))  
+total_seconds_lived = seconds_lived(age)
+print(f"Total seconds lived for a person of age {age}: {total_seconds_lived:.2f}")
